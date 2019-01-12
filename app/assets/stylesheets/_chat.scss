@@ -1,0 +1,134 @@
+$sidehead-color: #253141;
+$sidebody-color: #2f3e51;
+$font-color1:    #333333;
+$font-colorp:    #999999;
+$botnn:          #00bfff;
+$comment:        #434a54;
+
+.side {
+  width: 300px;
+  float: left;
+
+  &__head {
+    background-color: $sidehead-color;
+    height: 110px;
+  }
+  &__body {
+    background-color: $sidebody-color;
+    height: 658px;
+  }
+}
+
+h1 {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 40px 20px;
+}
+
+.cog-edit {
+  float: right;
+  color: white;
+  padding: 40px 15px 40px 0;
+  font-size: 16em;
+}
+.main-head {
+  width: calc(100% - 300px);
+  padding-left: 300px;
+}
+
+h2 {
+  padding: 35px 0 15px 40px;
+  font-size: 20px;
+  color: $font-color1;
+}
+
+h3 {
+  font-size: 12px;
+  color: $font-colorp;
+  padding-left: 40px;
+  padding-bottom: 10px;
+}
+
+.border {
+  border-bottom: 1px solid #eeeeee;
+}
+ .edit-botnn {
+  float: right;
+  padding: 0 20px;
+  height: 40px;
+  margin: 28px 40px;
+  background-color: #fffafa;
+  color: $botnn;
+  border-color: $botnn;
+ }
+
+.test {
+  color: white;
+  font-size: 15px;
+  padding: 20px 20px 5px 20px;
+}
+
+.test2 {
+  color: white;
+  font-size: 11px;
+  padding: 0 20px 40px 20px;
+}
+
+.main-body {
+  background-color: #f5f5f5;
+  height: 580px;
+  width: calc(100% - 300px);
+  padding: 0 0 80px 300px;
+}
+
+.name {
+  padding-top: 40px;
+  padding-left: 40px;
+  font-size: 16px;
+  color: $comment;
+}
+
+.comment {
+  padding-top: 10px;
+  padding-left: 40px;
+  font-size: 14px;
+  color: $comment;
+}
+
+footer {
+  height: 90px;
+  width: calc(100% - 300px);
+  background-color:silver;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.form {
+  height: 50px;
+  width: 910px;
+  margin: 20px 0 20px 60px;
+  color: $font-colorp;
+  position: absolute;
+  z-index: 1;
+}
+
+.image-logo {
+  right: 0;
+  position: absolute;
+  margin-top: 40px;
+  margin-right: 180px;
+  z-index: 2;
+}
+
+.send-botnn {
+  position: absolute;
+  right: 0;
+  background-color: $botnn;
+  color: white;
+  margin: 20px 40px 20px 15px;
+  float: right;
+  height: 50px;
+  width: 100px;
+}
