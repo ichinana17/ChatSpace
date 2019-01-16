@@ -1,10 +1,4 @@
-$sidehead-color: #253141;
-$sidebody-color: #2f3e51;
-$font-color1:    #333333;
-$font-colorp:    #999999;
-$botnn:          #00bfff;
-$comment:        #434a54;
-
+@import "./variable";
 
 .side {
   width: 300px;
