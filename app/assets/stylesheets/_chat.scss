@@ -8,11 +8,11 @@
   }
   &__body {
     background-color: $sidebody-color;
-    height: 711px;
+    height: 658px;
   }
 }
 
-h1 {
+.side-name {
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -23,7 +23,7 @@ h1 {
   float: right;
   color: white;
   padding: 40px 15px 40px 0;
-  font-size: 16em;
+  font-size: 1em;
 }
 .main-head {
   width: calc(100% - 300px);
