@@ -1,34 +1,3 @@
-!!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{:charset => "utf-8"}/
-    %title HTML
-    %link{:href => "application.scss", :rel => "stylesheet", :type => "text/css"}/
+.wrapper
 
-  %body
-    .side
-      .side__head
-        %i.fa.fa-cog.cog-edit
-        %a.fa.fa-edit.cog-edit{:href => "/groups/new"}
-        .side-name SEO
-      .side__body
-        .test テスト
-        .test2 wwwww
-
-    .main-head
-      %input.edit-botnn{:type => "submit", :value => "Edit"}/
-      .head-title sampleグループ
-      .head-subtitle aaaaaaaa
-      .border
-
-    .main-body
-      .name SEO
-      .comment Hello world!
-      .name neko
-      .comment Good bye world!
-
-  .main-footer
-    %i.fa.fa-image.image-logo
-    %input.form{:type => "text", :value => "  type a message"}/
-    %input.send-botnn{:type => "submit", :value => "Send"}/
+  = render 'shared/side_bar'
