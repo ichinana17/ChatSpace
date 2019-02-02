@@ -1,0 +1,42 @@
+.side-bar {
+  width: 300px;
+  float: left;
+}
+
+.header {
+   background-color: $sidehead-color;
+    height: 110px;
+
+    &__name {
+       color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 40px 20px;
+    }
+    &__lists {
+  //     float: right;
+  // color: white;
+  // padding: 40px 15px 40px 0;
+  // font-size: 1em;
+    }
+}
+
+.groups {
+   background-color: $sidebody-color;
+   height: 711px;
+   width: 300px;
+}
+
+.group__name {
+  color: white;
+  font-size: 15px;
+  padding: 20px 20px 5px 20px;
+  text-decoration: none;
+}
+
+.group__message {
+   color: white;
+  font-size: 11px;
+  padding: 0 20px 40px 20px;
+  text-decoration: none;
+}
