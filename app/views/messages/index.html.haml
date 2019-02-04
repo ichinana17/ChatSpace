@@ -1,34 +1,15 @@
-!!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{:charset => "utf-8"}/
-    %title HTML
-    %link{:href => "application.scss", :rel => "stylesheet", :type => "text/css"}/
+.wrapper
 
-  %body
-    .side
-      .side__head
-        %i.fa.fa-cog.cog-edit
-        %a.fa.fa-edit.cog-edit{:href => "/groups/new"}
-        .side-name SEO
-      .side__body
-        .test テスト
-        .test2 wwwww
+  = render 'shared/side_bar'
 
-    .main-head
-      %input.edit-botnn{:type => "submit", :value => "Edit"}/
-      .head-title sampleグループ
-      .head-subtitle aaaaaaaa
-      .border
+.messages
+  = render @messages
 
-    .main-body
-      .name SEO
-      .comment Hello world!
-      .name neko
-      .comment Good bye world!
-
-  .main-footer
-    %i.fa.fa-image.image-logo
-    %input.form{:type => "text", :value => "  type a message"}/
-    %input.send-botnn{:type => "submit", :value => "Send"}/
+.form
+  = form_for [@group, @message] do |f|
+    = f.text_field :content, class: 'form__message', placeholder: '  type a message'
+    .form__mask
+      = f.label :image, class: 'form__mask__image' do
+        = fa_icon 'picture-o', class: 'icon'
+        = f.file_field :image, class: 'hidden'
+    = f.submit 'Send', class: 'form__submit'
