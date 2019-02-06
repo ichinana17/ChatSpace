@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // .side {
 //   width: 300px;
 //   float: left;
@@ -97,6 +98,35 @@
 //   bottom: 0;
 //   right: 0;
 // }
+=======
+$sidehead-color: #253141;
+$sidebody-color: #2f3e51;
+$font-color1:    #333333;
+$font-colorp:    #999999;
+$botnn:          #00bfff;
+$comment:        #434a54;
+
+.side {
+  width: 300px;
+  float: left;
+
+  &__head {
+    background-color: $sidehead-color;
+    height: 110px;
+  }
+  &__body {
+    background-color: $sidebody-color;
+    height: 658px;
+  }
+}
+
+h1 {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 40px 20px;
+}
+>>>>>>> master
 
 .form {
   width: calc(100% - 300px);
