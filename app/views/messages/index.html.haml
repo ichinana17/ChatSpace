@@ -2,6 +2,15 @@
 
   = render 'shared/side_bar'
 
+.main-header
+  %a.edit-btn{:href => "/groups/:id/edit"} edit
+  .group-name
+    = @group.name
+  .group-member
+    MEMBER:
+    - @group.users.each do |group_user|
+      = group_user.name
+
 .messages
   = render @messages
 
@@ -10,6 +19,6 @@
     = f.text_field :content, class: 'form__message', placeholder: '  type a message'
     .form__mask
       = f.label :image, class: 'form__mask__image' do
-        = fa_icon 'picture-o', class: 'icon'
+        = fa_icon 'picture-o', class: 'form-icon'
         = f.file_field :image, class: 'hidden'
     = f.submit 'Send', class: 'form__submit'
