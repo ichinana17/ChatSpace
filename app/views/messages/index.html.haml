@@ -2,23 +2,28 @@
 
   = render 'shared/side_bar'
 
-.main-header
-  %a.edit-btn{:href => "/groups/:id/edit"} edit
-  .group-name
-    = @group.name
-  .group-member
-    MEMBER:
-    - @group.users.each do |group_user|
-      = group_user.name
+.chat-main
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__current-group
+        = @group.name
+      %ul.main-header__left-box__menber-list
+        MEMBER :
+        %li.main-header__left-box__member-list__member
+          - @group.users.each do |group_user|
+            = group_user.name
+    %a{:href => "/groups/:id/edit"}
+      .main-header__edit-btn
+        Edit
 
-.messages
-  = render @messages
+  .messages
+    = render @messages
 
-.form
-  = form_for [@group, @message] do |f|
-    = f.text_field :content, class: 'form__message', placeholder: '  type a message'
-    .form__mask
-      = f.label :image, class: 'form__mask__image' do
-        = fa_icon 'picture-o', class: 'form-icon'
-        = f.file_field :image, class: 'hidden'
-    = f.submit 'Send', class: 'form__submit'
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
