@@ -17,7 +17,6 @@ $(function(){
                 </div>`
       return html;
 
-
     }else{
        var html = `<div class='message'>
                   <div class='message__upper-info'>
