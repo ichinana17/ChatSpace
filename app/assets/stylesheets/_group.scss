@@ -1,119 +1,118 @@
-.chat-main {
-  width: calc(100vw - 300px);
-  float: left;
-}
+.chat-group-form {
+  width: 980px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
 
-.main-header {
-  height: 100px;
-  padding: 0 40px;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: solid 1px #eee;
-  overflow: scroll;
 
-  &__left-box {
-    margin-top: 35px;
+  h1 {
+    letter-spacing: 2px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
 
-    &__current-group {
-      font-size: 20px;
-      color: $font-color1;
-      margin-bottom: 15px;
+  &__errors {
+    margin: 30px 0;
+    padding: 20px 40px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 10px;
+      color: #f05050;
+      font-size: 14px;
     }
 
-    &__menber-list {
-      font-size: 12px;
-      color: $font-colorp;
-      display: flex;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      font-size: 13px;
     }
   }
 
-  &__edit-btn {
-    height: 40px;
-    line-height: 40px;
-    padding: 0 20px;
+  &__field {
     margin-top: 30px;
-    color: $botnn;
-    border: 1px solid $botnn;
-    position: absolute;
-    right: 40px;
-  }
-}
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+    }
 
-.messages{
-  height: calc(100vh - 190px);
-  padding: 46px 40px;
-  background-color: #fafafa;
-  overflow: scroll;
-  box-sizing: border-box;
-}
+    &__field--left {
+      float: left;
+      width: 30%;
+      padding-right: 20px;
+      padding-left: 20px;
+      box-sizing: border-box;
+    }
 
-.message {
-  padding-bottom: 40px;
+    &__field--right {
+      float: right;
+      width: 70%;
+    }
 
-  &__upper-info {
-    display: flex;
-    margin-bottom: 10px;
-
-    &__talker {
-      color: #434A54;
-      font-size: 16px;
+    &__label {
+      display: block;
+      line-height: 50px;
       font-weight: bold;
+      text-align: right;
     }
 
-    &__date {
-      color: #999999;
-      font-size: 12px;
-      margin-left: 10px;
+    &__input {
+      float: left;
+      width: 100%;
+      line-height: 30px;
+      padding: 10px 15px;
+      box-sizing: border-box;
     }
   }
 
-  &__text {
-    color: #434A54;
+  .chat-group-user {
+    padding: 0 15px;
+    line-height: 50px;
     font-size: 14px;
-    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+
+    &__name {
+      float: left;
+    }
+
+    &__btn {
+      float: right;
+      display: inline-block;
+      cursor: pointer;
+
+      &__btn--add {
+        color: #38aef0;
+      }
+
+      &__btn--remove {
+        color: #f05050;
+      }
+    }
   }
-}
 
-.form {
-  height: 90px;
-  padding: 20px 40px;
-  background-color:silver;
-  box-sizing: border-box;
-
-   &__message {
-    height: 50px;
-    width: 100%;
-    padding: 0 40px 0 10px;
-    border: none;
-    display: flex;
-
+  &__action-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    color: #fff;
+    background-color: #38aef0;
+    border: 0;
   }
-}
-
-.new_message {
-  position: relative;
-  display: flex;
-}
-
-.icon {
-  color: black;
-  font-size: 1.3rem;
-  position: absolute;
-  cursor: pointer;
-  right: 123px;
-  top: 14px;
-}
-
-.hidden {
-  display: none;
-}
-
-.form__submit {
-  width: 100px;
-  height: 50px;
-  padding: 0 30px;
-  margin-left: 15px;
-  background-color: #38aef0;
-  color: white;
-  cursor: pointer;
 }
