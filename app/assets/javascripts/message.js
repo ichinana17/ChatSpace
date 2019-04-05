@@ -1,6 +1,6 @@
 $(function(){
   function buildHTML(message){
-    if(message.image != null){
+    if(message.image){
       var html = `<div class='message'>
                   <div class='message__upper-info'>
                     <div class='message__upper-info__talker'>
